@@ -70,7 +70,6 @@ import org.schabi.newpipe.util.SecondaryStreamHelper;
 import org.schabi.newpipe.util.SimpleOnSeekBarChangeListener;
 import org.schabi.newpipe.util.StreamItemAdapter;
 import org.schabi.newpipe.util.StreamItemAdapter.StreamInfoWrapper;
-import org.schabi.newpipe.util.ThemeHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -197,6 +196,7 @@ public class DownloadDialog extends DialogFragment
     @Override
     public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+            setStyle(STYLE_NO_TITLE, com.google.android.material.R.style.ThemeOverlay_Material3_Dialog);
         if (DEBUG) {
             Log.d(TAG, "onCreate() called with: "
                     + "savedInstanceState = [" + savedInstanceState + "]");
@@ -212,7 +212,6 @@ public class DownloadDialog extends DialogFragment
         // dialog is being dismissed in onViewCreated()
         context = getContext();
 
-        setStyle(STYLE_NO_TITLE, ThemeHelper.getDialogTheme(context));
         Bridge.restoreInstanceState(this, savedInstanceState);
 
         this.audioTrackAdapter = new AudioTrackAdapter(wrappedAudioTracks);

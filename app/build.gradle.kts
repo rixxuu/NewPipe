@@ -42,6 +42,7 @@ configure<ApplicationExtension> {
 
     defaultConfig {
         applicationId = NEWPIPE_APPLICATION_ID_OLD
+resourceConfigurations += listOf("en")
         resValue("string", "app_name", "NewPipe")
         minSdk {
             version = release(NEWPIPE_VERSION_SDK_MIN)

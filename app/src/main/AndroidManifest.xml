@@ -90,7 +90,10 @@
             android:name=".settings.SettingsActivity"
             android:exported="false"
             android:label="@string/settings" />
-
+        
+        <activity
+            android:name="org.schabi.newpipe.settings.DownloadSettingsActivity"/>
+        
         <activity
             android:name=".about.AboutActivity"
             android:exported="false"

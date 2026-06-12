@@ -68,24 +68,6 @@
                 android:value="true" />
         </service>
 
-        <service
-            android:name=".player.PlayerService"
-            android:exported="true"
-            android:foregroundServiceType="mediaPlayback">
-            <intent-filter>
-                <action android:name="android.intent.action.MEDIA_BUTTON" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.media.browse.MediaBrowserService"/>
-            </intent-filter>
-        </service>
-
-        <activity
-            android:name=".player.PlayQueueActivity"
-            android:exported="false"
-            android:label="@string/title_activity_play_queue"
-            android:launchMode="singleTask" />
-
         <activity
             android:name=".settings.SettingsActivity"
             android:exported="false"
@@ -93,11 +75,6 @@
         
         <activity
             android:name="org.schabi.newpipe.settings.DownloadSettingsActivity"/>
-        
-        <activity
-            android:name=".about.AboutActivity"
-            android:exported="false"
-            android:label="@string/title_activity_about" />
 
         <service
             android:name=".local.feed.service.FeedLoadService"
@@ -151,11 +128,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".error.ReCaptchaActivity"
-            android:exported="false"
-            android:label="@string/recaptcha" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -16,6 +16,7 @@ import org.schabi.newpipe.databinding.ActivityDownloaderBinding;
 import org.schabi.newpipe.util.DeviceUtils;
 import org.schabi.newpipe.util.ThemeHelper;
 import org.schabi.newpipe.views.FocusOverlayView;
+import org.schabi.newpipe.settings.DownloadSettingsActivity;
 
 import us.shandian.giga.service.DownloadManagerService;
 import us.shandian.giga.ui.fragment.MissionsFragment;
@@ -81,14 +82,17 @@ public class DownloadActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
+        @Override
     public boolean onOptionsItemSelected(final MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+    final int id = item.getItemId();
+    if (id == R.id.action_download_settings) {
+        startActivity(new Intent(this, DownloadSettingsActivity.class));
+        return true;
+    } else if (id == android.R.id.home) {
+        onBackPressed();
+        return true;
+    } else {
+        return super.onOptionsItemSelected(item);
         }
     }
 }

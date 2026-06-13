@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.graphics.drawable.ColorDrawable;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,6 +46,11 @@ public class LoadingDialog extends DialogFragment {
         if (DEBUG) {
             Log.d(TAG, "onCreate() called with: "
                     + "savedInstanceState = [" + savedInstanceState + "]");
+        }
+        if (getDialog() != null && getDialog().getWindow() != null) {
+        getDialog().getWindow().setBackgroundDrawable(
+                new ColorDrawable(0)
+        );
         }
         this.setCancelable(false);
     }

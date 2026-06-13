@@ -15,6 +15,7 @@
 
     <!-- Base Theme -->
     <style name="Base.V21" parent="Theme.Material3.DayNight.NoActionBar">
+                <item name="android:overScrollMode">never</item>
         <item name="actionColor">@color/white</item>
         <item name="floatingActionButtonStyle">@style/FloatingActionButtonTheme</item>
         <item name="toolbarSearchColor">@color/white</item>
@@ -24,7 +25,12 @@
 
     <!-- Light Theme -->
     <style name="Base.V21.LightTheme" parent="Base">
-    
+            <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+                <item name="android:colorAccent">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="colorBackgroundFloating">@android:color/white</item>
+        <item name="colorButtonNormal">@android:color/black</item>
     
 
         <item name="separator_color">@color/light_separator_color</item>
@@ -45,7 +51,12 @@
 
     <!-- Dark Theme -->
     <style name="Base.V21.DarkTheme" parent="Base">
-        
+                <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="colorBackgroundFloating">@android:color/black</item>
+        <item name="android:colorAccent">@android:color/white</item>
+        <item name="colorButtonNormal">@android:color/white</item>
 
         <item name="separator_color">@color/dark_separator_color</item>
         <item name="contrast_background_color">@color/dark_contrast_background_color</item>
@@ -81,9 +92,13 @@
 
     <!-- Dialogs -->
     <style name="LightDialogTheme" parent="Theme.Material3.DayNight.Dialog">
+                <item name="android:colorBackground">@android:color/white</item>
+        <item name="dialogCornerRadius">@null</item>
     </style>
 
     <style name="DarkDialogTheme" parent="Theme.Material3.DayNight.Dialog">
+                <item name="android:colorBackground">@android:color/black</item>
+        <item name="dialogCornerRadius">@null</item>
     </style>
 
     <style name="LightDialogMinWidthTheme" parent="Theme.AppCompat.DayNight.Dialog.MinWidth">

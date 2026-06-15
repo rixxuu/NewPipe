@@ -107,12 +107,7 @@ public final class ThemeHelper {
      * @param context context to get the selected theme
      * @return the dialog style (the default one)
      */
-    @StyleRes
-    public static int getMinWidthDialogTheme(final Context context) {
-        return isLightThemeSelected(context) ? R.style.LightDialogMinWidthTheme
-                : R.style.DarkDialogMinWidthTheme;
-    }
-
+    
     /**
      * Return the selected theme styled according to the serviceId.
      *

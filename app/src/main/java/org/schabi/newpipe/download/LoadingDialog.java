@@ -46,10 +46,11 @@ public class LoadingDialog extends DialogFragment {
         if (DEBUG) {
             Log.d(TAG, "onCreate() called with: "
                     + "savedInstanceState = [" + savedInstanceState + "]");
-        }
         if (getDialog() != null && getDialog().getWindow() != null) {
-        getDialog().getWindow().setBackgroundDrawable(
-                new ColorDrawable(0)
+        Window window = getDialog().getWindow();
+
+        window.setBackgroundDrawable(
+                new ColorDrawable(android.graphics.Color.TRANSPARENT)
         );
         }
         this.setCancelable(false);

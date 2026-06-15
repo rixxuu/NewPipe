@@ -5,7 +5,7 @@
 
     <include
         android:id="@+id/toolbar_layout"
-        layout="@layout/toolbar_layout" />
+        layout="@layout/download_toolbar_layout" />
 
     <org.schabi.newpipe.views.NewPipeTextView
         android:id="@+id/file_name_text_view"
@@ -138,6 +138,7 @@
             android:id="@+id/threads"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@00000000"
             android:max="31"
             android:progress="3" />
     </LinearLayout>

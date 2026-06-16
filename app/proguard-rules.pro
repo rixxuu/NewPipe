@@ -4,14 +4,21 @@
 ## Rules for NewPipeExtractor
 -keep class org.schabi.newpipe.extractor.timeago.patterns.** { *; }
 
+# Rules for Rhino and Rhino Engine
+-keep class org.mozilla.javascript.* { *; }
+-keep class org.mozilla.javascript.** { *; }
+-keep class org.mozilla.javascript.engine.** { *; }
+-keep class org.mozilla.classfile.ClassFileWriter
+-dontwarn org.mozilla.javascript.JavaToJSONConverters
+-dontwarn org.mozilla.javascript.tools.**
+-keep class javax.script.** { *; }
+-dontwarn javax.script.**
+-keep class jdk.dynalink.** { *; }
+-dontwarn jdk.dynalink.**
+
 ## Rules for OkHttp. Copy pasted from https://github.com/square/okhttp
 -dontwarn okhttp3.**
 -dontwarn okio.**
--dontwarn org.mozilla.javascript.**
--dontwarn org.mozilla.classfile.**
--dontwarn javax.script.**
--dontwarn jdk.dynalink.**
--dontwarn java.beans.**
 
 ## See https://github.com/TeamNewPipe/NewPipe/pull/1441
 -keepclassmembers class * implements java.io.Serializable {

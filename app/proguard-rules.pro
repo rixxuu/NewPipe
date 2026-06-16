@@ -1,21 +1,8 @@
 # https://developer.android.com/build/shrink-code
 
-## Helps debug release versions
--dontobfuscate
 
 ## Rules for NewPipeExtractor
 -keep class org.schabi.newpipe.extractor.timeago.patterns.** { *; }
-## Rules for Rhino and Rhino Engine
--keep class org.mozilla.javascript.* { *; }
--keep class org.mozilla.javascript.** { *; }
--keep class org.mozilla.javascript.engine.** { *; }
--keep class org.mozilla.classfile.ClassFileWriter
--dontwarn org.mozilla.javascript.JavaToJSONConverters
--dontwarn org.mozilla.javascript.tools.**
--keep class javax.script.** { *; }
--dontwarn javax.script.**
--keep class jdk.dynalink.** { *; }
--dontwarn jdk.dynalink.**
 
 ## Rules for OkHttp. Copy pasted from https://github.com/square/okhttp
 -dontwarn okhttp3.**
@@ -51,6 +38,3 @@
 -keepclasseswithmembers class org.schabi.newpipe.** {
     kotlinx.serialization.KSerializer serializer(...);
 }
-
-# See https://github.com/TeamNewPipe/NewPipe/issues/13508
--keep class org.ocpsoft.prettytime.i18n.Resources* { *; }

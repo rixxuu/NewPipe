@@ -10,6 +10,14 @@
 -keep class jdk.dynalink.** { *; }
 -dontwarn jdk.dynalink.**
 
+#Rules for Rhino and Rhino Engine
+-dontwarn org.mozilla.javascript.* { *; }
+-dontwarn org.mozilla.javascript.** { *; }
+-dontwarn org.mozilla.javascript.engine.** { *; }
+-dontwarn org.mozilla.classfile.ClassFileWriter
+-dontwarn org.mozilla.javascript.JavaToJSONConverters
+-dontwarn org.mozilla.javascript.tools.**
+
 ## Rules for OkHttp. Copy pasted from https://github.com/square/okhttp
 -dontwarn okhttp3.**
 -dontwarn okio.**

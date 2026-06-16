@@ -7,6 +7,11 @@
 ## Rules for OkHttp. Copy pasted from https://github.com/square/okhttp
 -dontwarn okhttp3.**
 -dontwarn okio.**
+-dontwarn org.mozilla.javascript.**
+-dontwarn org.mozilla.classfile.**
+-dontwarn javax.script.**
+-dontwarn jdk.dynalink.**
+-dontwarn java.beans.**
 
 ## See https://github.com/TeamNewPipe/NewPipe/pull/1441
 -keepclassmembers class * implements java.io.Serializable {

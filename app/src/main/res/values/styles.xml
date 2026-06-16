@@ -91,6 +91,9 @@
     <style name="BlackTheme" parent="Base.BlackTheme"/>
 
     <!-- Dialogs -->
+    <style name="DownloadDialogTheme" parent="ThemeOverlay.Material3.Dialog">
+            <item name="dialogCornerRadius">0dip</item>
+</style>
     <style name="LightDialogTheme" parent="Theme.Material3.DayNight.Dialog">
                 <item name="android:colorBackground">@android:color/white</item>
         <item name="dialogCornerRadius">@null</item>

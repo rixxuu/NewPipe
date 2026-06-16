@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.material.tabs.TabLayout;
 
 /**
  * A TabLayout that is scrollable when tabs exceed its width.

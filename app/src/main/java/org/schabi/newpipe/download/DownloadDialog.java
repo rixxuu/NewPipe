@@ -196,7 +196,7 @@ public class DownloadDialog extends DialogFragment
     @Override
     public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-            setStyle(STYLE_NO_TITLE, com.google.android.material.R.style.ThemeOverlay_Material3_Dialog);
+            setStyle(STYLE_NO_TITLE, com.google.android.material.R.style.Theme.Material3.DayNight.Dialog);
         if (DEBUG) {
             Log.d(TAG, "onCreate() called with: "
                     + "savedInstanceState = [" + savedInstanceState + "]");

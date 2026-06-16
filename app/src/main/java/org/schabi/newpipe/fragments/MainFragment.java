@@ -4,8 +4,6 @@ import static android.widget.RelativeLayout.ABOVE;
 import static android.widget.RelativeLayout.ALIGN_PARENT_BOTTOM;
 import static android.widget.RelativeLayout.ALIGN_PARENT_TOP;
 import static android.widget.RelativeLayout.BELOW;
-import static com.google.android.material.tabs.TabLayout.INDICATOR_GRAVITY_BOTTOM;
-import static com.google.android.material.tabs.TabLayout.INDICATOR_GRAVITY_TOP;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -30,8 +28,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapterMenuWorkaround;
 import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.ViewPager;
-
-import com.google.android.material.tabs.TabLayout;
 
 import org.schabi.newpipe.BaseFragment;
 import org.schabi.newpipe.R;

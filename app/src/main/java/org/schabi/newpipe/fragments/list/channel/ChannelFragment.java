@@ -27,7 +27,6 @@ import androidx.preference.PreferenceManager;
 
 import com.evernote.android.state.State;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.tabs.TabLayout;
 import com.jakewharton.rxbinding4.view.RxView;
 
 import org.schabi.newpipe.R;

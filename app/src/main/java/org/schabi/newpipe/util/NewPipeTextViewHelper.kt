@@ -12,7 +12,7 @@ import org.schabi.newpipe.util.external_communication.ShareUtils
 
 object NewPipeTextViewHelper {
     /**
-     * Share the selected text of [NewPipeTextViews][org.schabi.newpipe.views.NewPipeTextView] and
+     * Share the selected text of [NewPipeTextViews][TextView] and
      * [NewPipeEditTexts][org.schabi.newpipe.views.NewPipeEditText] with
      * [ShareUtils.shareText].
      *
@@ -23,7 +23,7 @@ object NewPipeTextViewHelper {
      *
      *
      * @param textView the [TextView] on which sharing the selected text. It should be a
-     * [org.schabi.newpipe.views.NewPipeTextView] or a [org.schabi.newpipe.views.NewPipeEditText]
+     * [TextView] or a [org.schabi.newpipe.views.NewPipeEditText]
      * (even if [standard TextViews][TextView] are supported).
      */
     @JvmStatic

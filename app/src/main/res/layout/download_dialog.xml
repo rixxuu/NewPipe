@@ -69,6 +69,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:minWidth="150dp"
+        android:popupTheme="@style/ThemeOverlay.Material3.MaterialAlertDialog"
         tools:listitem="@layout/stream_quality_item" />
 
     <Spinner
@@ -80,6 +81,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:minWidth="150dp"
+        android:popupTheme="@style/ThemeOverlay.Material3.MaterialAlertDialog"
         tools:visibility="gone" />
 
     <Spinner
@@ -91,6 +93,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:minWidth="150dp"
+        android:popupTheme="@style/ThemeOverlay.Material3.MaterialAlertDialog"
         tools:visibility="gone" />
 
     <org.schabi.newpipe.views.NewPipeTextView

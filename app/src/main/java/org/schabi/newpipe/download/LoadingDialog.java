@@ -51,6 +51,15 @@ public class LoadingDialog extends DialogFragment {
     }
 
     @Override
+public void onStart() {
+    super.onStart();
+    if (getDialog() != null && getDialog().getWindow() != null) {
+        getDialog().getWindow().setBackgroundDrawableResource(
+            android.R.color.transparent);
+    }
+            }
+    
+    @Override
     public View onCreateView(
             @NonNull final LayoutInflater inflater,
             final ViewGroup container,
@@ -59,10 +68,6 @@ public class LoadingDialog extends DialogFragment {
             Log.d(TAG, "onCreateView() called with: "
                     + "inflater = [" + inflater + "], container = [" + container + "], "
                     + "savedInstanceState = [" + savedInstanceState + "]");
-        if (getDialog() != null && getDialog().getWindow() != null) {
-                getDialog().getWindow().setBackgroundDrawableResource(
-                        android.R.color.transparent);
-                        }
         }
         return inflater.inflate(R.layout.download_loading_dialog, container);
     }

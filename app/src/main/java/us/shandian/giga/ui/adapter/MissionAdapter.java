@@ -202,7 +202,7 @@ public class MissionAdapter extends Adapter<ViewHolder> implements Handler.Callb
         h.icon.setImageResource(Utility.getIconForFileType(type));
         h.name.setText(item.mission.storage.getName());
 
-        h.progress.setColors(Utility.getBackgroundForFileType(mContext, type));
+        h.progress.setColors(Utility.getBackgroundForFileType(mContext, type),Utility.getForegroundForFileType(mContext, type));
 
         if (h.item.mission instanceof DownloadMission) {
             DownloadMission mission = (DownloadMission) item.mission;

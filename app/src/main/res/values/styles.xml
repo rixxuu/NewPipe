@@ -16,7 +16,6 @@
     <!-- Base Theme -->
     <style name="Base.V21" parent="Theme.Material3.DayNight.NoActionBar">
                 <item name="alertDialogTheme">@style/Theme.Base.AlertDialog</item>
-                <item name="homeAsUpIndicator">@drawable/ic_arrow_back_black_24</item>
         <item name="android:overScrollMode">never</item>
         <item name="actionColor">@color/white</item>
         <item name="floatingActionButtonStyle">@style/FloatingActionButtonTheme</item>

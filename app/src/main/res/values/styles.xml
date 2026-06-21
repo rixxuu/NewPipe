@@ -15,6 +15,8 @@
 
     <!-- Base Theme -->
     <style name="Base.V21" parent="Theme.Material3.DayNight.NoActionBar">
+                <item name="alertDialogTheme">@style/Theme.Base.AlertDialog</item>
+                <item name="homeAsUpIndicator">@drawable/ic_arrow_back_black_24</item>
         <item name="android:overScrollMode">never</item>
         <item name="actionColor">@color/white</item>
         <item name="floatingActionButtonStyle">@style/FloatingActionButtonTheme</item>
@@ -27,12 +29,15 @@
     <style name="Base.V21.LightTheme" parent="Base">
             <item name="android:colorBackground">@android:color/white</item>
         <item name="android:statusBarColor">@android:color/white</item>
-                <item name="android:colorPrimary">@android:color/black</item>
         <item name="android:navigationBarColor">@android:color/white</item>
         <item name="colorBackgroundFloating">@android:color/white</item>
         <item name="colorButtonNormal">@android:color/black</item>
                 <item name="colorOutline">#74777F</item>
         <item name="colorSurfaceContainerHighest">#f2f2f2</item>
+                <item name="colorOnPrimary">@android:color/white</item>
+                <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryContainer">@android:color/white</item>
+        <item name="colorSurface">@android:color/white</item>
 
         <item name="separator_color">@color/light_separator_color</item>
         <item name="contrast_background_color">@color/light_contrast_background_color</item>
@@ -56,10 +61,13 @@
         <item name="android:statusBarColor">@android:color/black</item>
         <item name="android:navigationBarColor">@android:color/black</item>
         <item name="colorBackgroundFloating">@android:color/black</item>
-        <item name="android:colorPrimary">@android:color/white</item>
         <item name="colorButtonNormal">@android:color/white</item>
                 <item name="colorOutline">#8E9099</item>
                 <item name="colorSurfaceContainerHighest">#1E1E1E</item>
+                <item name="colorOnPrimary">@android:color/black</item>
+                <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryContainer">@android:color/black</item>
+        <item name="colorSurface">@android:color/black</item>
 
         <item name="separator_color">@color/dark_separator_color</item>
         <item name="contrast_background_color">@color/dark_contrast_background_color</item>
@@ -96,6 +104,13 @@
     <!-- Dialogs -->
     <style name="DownloadDialogTheme" parent="ThemeOverlay.Material3.Dialog">
             <item name="dialogCornerRadius">0dip</item>
+            <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:colorBackground">?attr/colorSurfaceContainer</item>
+        <item name="android:windowAnimationStyle">@style/MaterialAlertDialog.Material3.Animation</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:listPreferredItemHeightSmall">48.0dp</item>
+        <item name="dialogCornerRadius">28.0dp</item>
+    </style>
 </style>
     <style name="LightDialogTheme" parent="Theme.Material3.DayNight.Dialog">
                 <item name="android:colorBackground">@android:color/white</item>

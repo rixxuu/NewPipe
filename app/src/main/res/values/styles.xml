@@ -103,14 +103,16 @@
     <!-- Dialogs -->
     <style name="DownloadDialogTheme" parent="ThemeOverlay.Material3.Dialog">
             <item name="dialogCornerRadius">0dip</item>
+    </style>
+        
             <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="android:colorBackground">?attr/colorSurfaceContainer</item>
         <item name="android:windowAnimationStyle">@style/MaterialAlertDialog.Material3.Animation</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="android:listPreferredItemHeightSmall">48.0dp</item>
-        <item name="dialogCornerRadius">28.0dp</item>
-    </style>
+        <item name="dialogCornerRadius">0.0dp</item>
 </style>
+    
     <style name="LightDialogTheme" parent="Theme.Material3.DayNight.Dialog">
                 <item name="android:colorBackground">@android:color/white</item>
         <item name="dialogCornerRadius">@null</item>

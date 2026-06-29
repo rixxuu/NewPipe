@@ -17,7 +17,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="2dp">
 
-            <org.schabi.newpipe.views.NewPipeTextView
+            <TextView
                 android:id="@+id/item_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
             android:padding="10dp"
             android:scaleType="fitXY" />
 
-        <org.schabi.newpipe.views.NewPipeTextView
+        <TextView
             android:id="@+id/item_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <org.schabi.newpipe.views.NewPipeTextView
+        <TextView
             android:id="@+id/item_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
             android:text="100.00MB"
             android:textSize="12sp" />
 
-        <org.schabi.newpipe.views.NewPipeTextView
+        <TextView
             android:id="@+id/item_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

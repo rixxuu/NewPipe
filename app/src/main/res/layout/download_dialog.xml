@@ -64,6 +64,7 @@
     </RadioGroup>
 
     <Spinner
+        android:popupBackground="@drawable/m3_popupmenu_background"
         android:id="@+id/quality_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,6 +76,7 @@
         tools:listitem="@layout/stream_quality_item" />
 
     <Spinner
+        android:popupBackground="@drawable/m3_popupmenu_background"
         android:id="@+id/audio_track_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,6 +88,7 @@
         tools:visibility="gone" />
 
     <Spinner
+        android:popupBackground="@drawable/m3_popupmenu_background"
         android:id="@+id/audio_stream_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

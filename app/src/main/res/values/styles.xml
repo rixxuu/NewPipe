@@ -101,8 +101,7 @@
     <style name="BlackTheme" parent="Base.BlackTheme"/>
 
     <!-- Dialogs -->
-    <style name="DownloadDialogTheme" parent="ThemeOverlay.Material3.Dialog">
-            <item name="dialogCornerRadius">0dip</item>
+    <style name="DownloadDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
     </style>
         
             <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
@@ -122,20 +121,10 @@
         <item name="dialogCornerRadius">@null</item>
     </style>
 
-    <style name="LightDialogMinWidthTheme" parent="Theme.AppCompat.DayNight.Dialog.MinWidth">
-        <item name="colorPrimary">@color/light_youtube_primary_color</item>
-        <item name="colorPrimaryDark">@color/light_youtube_primary_color</item>
-        <item name="colorAccent">@color/light_youtube_accent_color</item>
-        <item name="android:windowBackground">@color/light_dialog_background_color</item>
-        <item name="windowBackground">@color/light_dialog_background_color</item>
+    <style name="LightDialogMinWidthTheme" parent="@null">
     </style>
 
-    <style name="DarkDialogMinWidthTheme" parent="Theme.AppCompat.DayNight.Dialog.MinWidth">
-        <item name="colorPrimary">@color/dark_youtube_primary_color</item>
-        <item name="colorPrimaryDark">@color/dark_youtube_primary_color</item>
-        <item name="colorAccent">@color/dark_youtube_accent_color</item>
-        <item name="android:windowBackground">@color/dark_dialog_background_color</item>
-        <item name="windowBackground">@color/dark_dialog_background_color</item>
+    <style name="DarkDialogMinWidthTheme" parent="@null">
     </style>
     
     <!-- Settings -->

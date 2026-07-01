@@ -121,10 +121,10 @@
         <item name="dialogCornerRadius">@null</item>
     </style>
 
-    <style name="LightDialogMinWidthTheme" parent="@null">
+    <style name="LightDialogMinWidthTheme">
     </style>
 
-    <style name="DarkDialogMinWidthTheme" parent="@null">
+    <style name="DarkDialogMinWidthTheme">
     </style>
     
     <!-- Settings -->

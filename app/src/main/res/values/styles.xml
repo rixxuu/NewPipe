@@ -96,7 +96,7 @@
         
     </style>
         
-            <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.Material.MaterialAlertDialog">
+            <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="android:colorBackground">@color/background</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="android:listPreferredItemHeightSmall">48.0dp</item>

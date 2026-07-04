@@ -85,40 +85,28 @@
     <style name="DarkTheme" parent="Base.DarkTheme"/>
 
     <!-- Black Theme -->
-    <style name="Base.V21.BlackTheme" parent="DarkTheme">
-        <item name="android:windowBackground">@color/black_background_color</item>
-        <item name="windowBackground">@color/black_background_color</item>
-
-        <item name="separator_color">@color/black_separator_color</item>
-        <item name="contrast_background_color">@color/black_contrast_background_color</item>
-
-        <item name="card_item_background_color">@color/black_card_item_background_color</item>
-        <item name="card_item_contrast_color">@color/black_card_item_contrast_color</item>
-        <item name="border_color">@color/black_border_color</item>
-        <item name="dashed_border">@drawable/dashed_border_black</item>
+    <style name="Base.V21.BlackTheme">
     </style>
     <style name="Base.BlackTheme" parent="Base.V21.BlackTheme" />
     <style name="BlackTheme" parent="Base.BlackTheme"/>
 
     <!-- Dialogs -->
     <style name="DownloadDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
+       <item name="android:windowBackground">@color/background</item>
+        
     </style>
         
-            <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
+            <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.Material.MaterialAlertDialog">
         <item name="android:colorBackground">@color/background</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="android:listPreferredItemHeightSmall">48.0dp</item>
         <item name="dialogCornerRadius">0.0dp</item>
 </style>
     
-    <style name="LightDialogTheme" parent="Theme.Material3.DayNight.Dialog">
-                <item name="android:colorBackground">@android:color/white</item>
-        <item name="dialogCornerRadius">@null</item>
+    <style name="LightDialogTheme">
     </style>
 
-    <style name="DarkDialogTheme" parent="Theme.Material3.DayNight.Dialog">
-                <item name="android:colorBackground">@android:color/black</item>
-        <item name="dialogCornerRadius">@null</item>
+    <style name="DarkDialogTheme">
     </style>
 
     <style name="LightDialogMinWidthTheme">
@@ -137,7 +125,6 @@
     </style>
 
     <style name="BlackSettingsTheme" parent="BlackTheme">
-        <item name="colorAccent">@color/black_settings_accent_color</item>
     </style>
 
     <!-- Router Activity -->

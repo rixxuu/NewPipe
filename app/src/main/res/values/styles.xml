@@ -91,27 +91,11 @@
     <style name="BlackTheme" parent="Base.BlackTheme"/>
 
     <!-- Dialogs -->
-    <style name="DownloadDialogTheme" parent="Theme.Material3.DayNight.Dialog.Alert">
+    <style name="DownloadDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
        <item name="android:windowBackground">@color/background</item>
-    <item name="android:windowMinWidthMajor">0%</item>
-    <item name="android:windowMinWidthMinor">0%</item>
-    <item name="materialAlertDialogTitlePanelStyle">@style/CompactTitlePanel</item>
-    <item name="materialAlertDialogTitleTextStyle">@style/CompactTitleText</item>
+    <item name="android:colorAccent">@color/accent</item>
 </style>
-
-<style name="CompactTitlePanel" parent="MaterialAlertDialog.Material3.Title.Panel">
-    <item name="android:minHeight">?attr/actionBarSize</item>
-    <item name="android:paddingTop">0dp</item>
-    <item name="android:paddingBottom">0dp</item>
-    <item name="android:gravity">center_vertical</item>
-</style>
-
-<style name="CompactTitleText" parent="MaterialAlertDialog.Material3.Title.Text">
-    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
-    <item name="android:maxLines">1</item>
-</style>
-        
-            <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.AppCompat.Dialog">
+            <style name="Theme.Base.AlertDialog" parent="Theme.AppCompat.DayNight.Dialog">
         <item name="android:colorBackground">@color/background</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="android:listPreferredItemHeightSmall">48.0dp</item>

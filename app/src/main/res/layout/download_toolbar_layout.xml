@@ -12,6 +12,7 @@
         android:layout_height="?attr/actionBarSize"
         android:gravity="center_vertical"
         app:titleCentered="true"
+        app:titleTextAppearance="@style/DownloadDialogTitleTextAppearance"
         android:minHeight="?attr/actionBarSize">
 
         <include

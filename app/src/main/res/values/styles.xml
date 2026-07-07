@@ -91,9 +91,12 @@
     <style name="BlackTheme" parent="Base.BlackTheme"/>
 
     <!-- Dialogs -->
-    <style name="DownloadDialogTheme" parent="Theme.Material3.DayNight.Dialog">
+    <style name="DownloadDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
        <item name="android:windowBackground">@color/background</item>
     <item name="android:colorAccent">@color/accent</item>
+</style>
+    <style name="DownloadDialogTitleTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+    <item name="android:textSize">20sp</item>
 </style>
             <style name="Theme.Base.AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="android:colorBackground">@color/background</item>

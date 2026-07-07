@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/dialog_border_bg"
     android:layout_height="match_parent">
 
     <include
@@ -146,6 +147,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:max="31"
+            android:indeterminateTint="@color/accent"
             android:progress="3" />
     </LinearLayout>
 

@@ -91,11 +91,11 @@
     <style name="BlackTheme" parent="Base.BlackTheme"/>
 
     <!-- Dialogs -->
-    <style name="DownloadDialogTheme" parent="ThemeOverlay.Material3.Dialog">
+    <style name="DownloadDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
        <item name="android:windowBackground">@color/background</item>
     <item name="android:colorAccent">@color/accent</item>
 </style>
-            <style name="Theme.Base.AlertDialog" parent="ThemeOverlay.Material3.Dialog">
+            <style name="Theme.Base.AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="android:colorBackground">@color/background</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="android:listPreferredItemHeightSmall">48.0dp</item>

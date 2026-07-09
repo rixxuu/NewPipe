@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="progress_bar">#FF065FD4</color>
     <color name="accent">#212121</color>
     <color name="background">#ffffff</color>
     <color name="foreground">#000000</color>

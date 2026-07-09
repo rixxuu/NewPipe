@@ -4,6 +4,6 @@
                     context.runOnUiThread(() -> {
                         // Getting the stream info usually takes a moment
                         // Notifying the user here to ensure that no confusion arises
-                        emitter.setCancellable(() -> {});
+                        emitter.setCancellable(toast::cancel);
             }))));
         }

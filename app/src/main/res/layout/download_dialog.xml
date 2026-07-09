@@ -46,22 +46,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:background="@null"
-            android:text="@string/video" />
+            android:text="@string/video" 
+            android:button="@drawable/radio_selector"
+            android:paddingStart="3.0dip"
+            android:paddingEnd="3.0dip" />
 
         <RadioButton
             android:id="@+id/audio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="@string/audio" />
+            android:text="@string/audio"
+            android:button="@drawable/radio_selector" 
+            android:paddingStart="3.0dip"
+            android:paddingEnd="3.0dip" />
 
         <RadioButton
             android:id="@+id/subtitle_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:text="@string/caption_setting_title" />
+            android:text="@string/caption_setting_title"
+            android:button="@drawable/radio_selector"
+            android:paddingStart="3.0dip" 
+            android:paddingEnd="3.0dip" />
     </RadioGroup>
 
     <Spinner

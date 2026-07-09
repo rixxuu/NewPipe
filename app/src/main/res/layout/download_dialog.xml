@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/file_name"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginBottom="6dp"
         android:gravity="left"
         android:orientation="horizontal"
@@ -47,6 +47,7 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="@string/video" 
+            android:background="@null"
             android:button="@drawable/radio_selector"
             android:paddingStart="3.0dip"
             android:paddingEnd="3.0dip" />
@@ -56,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/audio"
+            android:background="@null"
             android:button="@drawable/radio_selector" 
             android:paddingStart="3.0dip"
             android:paddingEnd="3.0dip" />
@@ -65,6 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/caption_setting_title"
+            android:background="@null"
             android:button="@drawable/radio_selector"
             android:paddingStart="3.0dip" 
             android:paddingEnd="3.0dip" />
@@ -153,7 +156,6 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:max="31"
-            android:indeterminateTint="@color/accent"
             android:progress="3" />
     </LinearLayout>
 

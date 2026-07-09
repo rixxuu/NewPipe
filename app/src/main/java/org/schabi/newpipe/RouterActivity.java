@@ -153,7 +153,7 @@ public class RouterActivity extends AppCompatActivity {
             dismissListener = new FragmentManager.FragmentLifecycleCallbacks() {
                 @Override
                 public void onFragmentDestroyed(@NonNull final FragmentManager fm,
-                                                @NonNull final Fragment f) {
+                                               @NonNull final Fragment f) {
                     super.onFragmentDestroyed(fm, f);
                     if (f instanceof DialogFragment && fm.getFragments().isEmpty()) {
                         // No more DialogFragments, we're done
@@ -778,13 +778,10 @@ public class RouterActivity extends AppCompatActivity {
 
         <T> Single<T> pleaseWait(final Single<T> single) {
             // 'abuse' ambWith() here to cancel the toast for us when the wait is over
-            final Toast toast = Toast.makeText(getActivityContext().orElse(null),
-                    R.string.loading_metadata_title, Toast.LENGTH_SHORT);
             return single.ambWith(Single.create(emitter -> getActivityContext().ifPresent(context ->
                     context.runOnUiThread(() -> {
                         // Getting the stream info usually takes a moment
                         // Notifying the user here to ensure that no confusion arises
-                        toast.show();
                         emitter.setCancellable(toast::cancel);
             }))));
         }

@@ -142,13 +142,13 @@ public class Utility {
         int colorRes;
         switch (type) {
             case MUSIC:
-                colorRes = R.color.audio_left_to_load_color;
+                colorRes = R.color.transparent_background_color;
                 break;
             case VIDEO:
-                colorRes = R.color.video_left_to_load_color;
+                colorRes = R.color.transparent_background_color;
                 break;
             case SUBTITLE:
-                colorRes = R.color.subtitle_left_to_load_color;
+                colorRes = R.color.transparent_background_color;
                 break;
             default:
                 colorRes = R.color.gray;
@@ -162,16 +162,16 @@ public class Utility {
         int colorRes;
         switch (type) {
             case MUSIC:
-                colorRes = R.color.audio_already_load_color;
+                colorRes = R.color.transparent_background_color;
                 break;
             case VIDEO:
-                colorRes = R.color.video_already_load_color;
+                colorRes = R.color.transparent_background_color;
                 break;
             case SUBTITLE:
-                colorRes = R.color.subtitle_already_load_color;
+                colorRes = R.color.transparent_background_color;
                 break;
             default:
-                colorRes = R.color.gray;
+                colorRes = R.color.transparent_background_color;
                 break;
         }
 

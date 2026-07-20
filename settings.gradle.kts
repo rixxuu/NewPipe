@@ -20,7 +20,7 @@ dependencyResolutionManagement {
         maven(url = "https://repo.clojars.org")
     }
 }
-include(":app") // androidApp
+include(":app") // AndroidApp
 include(":desktopApp")
 include("shared")
 

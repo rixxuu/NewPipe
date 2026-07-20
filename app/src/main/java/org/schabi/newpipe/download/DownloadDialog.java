@@ -16,7 +16,6 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -32,10 +31,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.widget.Toolbar;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import androidx.collection.SparseArrayCompat;
 import androidx.documentfile.provider.DocumentFile;
-import androidx.fragment.app.DialogFragment;
 import androidx.preference.PreferenceManager;
 
 import com.evernote.android.state.State;
@@ -87,7 +85,7 @@ import us.shandian.giga.service.DownloadManagerService;
 import us.shandian.giga.service.DownloadManagerService.DownloadManagerBinder;
 import us.shandian.giga.service.MissionState;
 
-public class DownloadDialog extends DialogFragment
+public class DownloadDialog extends BottomSheetDialogFragment
         implements RadioGroup.OnCheckedChangeListener, AdapterView.OnItemSelectedListener {
     private static final String TAG = "DialogFragment";
     private static final boolean DEBUG = MainActivity.DEBUG;
@@ -112,7 +110,7 @@ public class DownloadDialog extends DialogFragment
     private StoredDirectoryHelper mainStorageAudio = null;
     private StoredDirectoryHelper mainStorageVideo = null;
     private DownloadManager downloadManager = null;
-    private MenuItem okButton = null;
+    private boolean downloadServiceConnected = false;
     private Context context = null;
     private boolean askForSavePath;
 
@@ -196,7 +194,6 @@ public class DownloadDialog extends DialogFragment
     @Override
     public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-            setStyle(STYLE_NO_TITLE, R.style.DownloadDialogTheme);
         if (DEBUG) {
             Log.d(TAG, "onCreate() called with: "
                     + "savedInstanceState = [" + savedInstanceState + "]");
@@ -231,7 +228,10 @@ public class DownloadDialog extends DialogFragment
                 downloadManager = mgr.getDownloadManager();
                 askForSavePath = mgr.askForSavePath();
 
-                okButton.setEnabled(true);
+                downloadServiceConnected = true;
+if (dialogBinding != null) {
+    dialogBinding.downloadButton.setEnabled(true);
+}
 
                 context.unbindService(this);
             }
@@ -309,7 +309,7 @@ public class DownloadDialog extends DialogFragment
         dialogBinding.audioTrackSpinner.setOnItemSelectedListener(this);
         dialogBinding.videoAudioGroup.setOnCheckedChangeListener(this);
 
-        initToolbar(dialogBinding.toolbarLayout.toolbar);
+        setupActionButtons();
         setupDownloadOptions();
 
         prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
@@ -332,28 +332,11 @@ public class DownloadDialog extends DialogFragment
         fetchStreamsSize();
     }
 
-    private void initToolbar(final Toolbar toolbar) {
-        if (DEBUG) {
-            Log.d(TAG, "initToolbar() called with: toolbar = [" + toolbar + "]");
-        }
-
-        toolbar.setTitle(R.string.download_dialog_title);
-        toolbar.setNavigationIcon(R.drawable.ic_close);
-        toolbar.inflateMenu(R.menu.dialog_url);
-        toolbar.setNavigationOnClickListener(v -> dismiss());
-        toolbar.setNavigationContentDescription(R.string.cancel);
-
-        okButton = toolbar.getMenu().findItem(R.id.okay);
-        okButton.setEnabled(false); // disable until the download service connection is done
-
-        toolbar.setOnMenuItemClickListener(item -> {
-            if (item.getItemId() == R.id.okay) {
-                prepareSelectedDownload();
-                return true;
-            }
-            return false;
-        });
-    }
+    private void setupActionButtons() {
+    dialogBinding.downloadButton.setEnabled(downloadServiceConnected);
+    dialogBinding.cancelButton.setOnClickListener(v -> dismiss());
+    dialogBinding.downloadButton.setOnClickListener(v -> prepareSelectedDownload());
+}
 
     @Override
     public void onDestroy() {

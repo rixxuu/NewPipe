@@ -14,7 +14,7 @@
     <style name="OpeningTheme" parent="Base.OpeningTheme" />
 
     <!-- Base Theme -->
-    <style name="Base.V21" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.V21" parent="Theme.MaterialComponents.DayNight.NoActionBar">
                 <item name="alertDialogTheme">@style/Theme.Base.AlertDialog</item>
         <item name="android:overScrollMode">never</item>
         <item name="actionColor">@color/white</item>
@@ -98,7 +98,7 @@
     <style name="DownloadDialogTitleTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
     <item name="android:textSize">20sp</item>
 </style>
-            <style name="Theme.Base.AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+            <style name="Theme.Base.AlertDialog" parent="Theme.MaterialComponents.DayNight.Dialog">
         <item name="android:colorBackground">@color/background</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="android:listPreferredItemHeightSmall">48.0dp</item>
